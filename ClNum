@@ -1,0 +1,23 @@
+public class ClNum {
+    public static void main(String[] args) {
+        double m = 8.3;
+        double n = 11.4;
+        double k = closestToTen(m, n);
+        if (Double.isNaN(k)) {
+            System.out.println("the numbers are the same");
+        } else {
+            System.out.println("Closest to ten : " + k);
+        }
+    }
+
+
+    public static double closestToTen(double m, double n) {
+        double modM = Math.abs(m - 10);
+        double modN = Math.abs(n - 10);
+        if (modM == modN) {
+            return Double.NaN;
+        }
+        return modM > modN ? n : m;
+    }
+
+} 
