@@ -1,0 +1,9 @@
+public class PairNum {
+    public static void main(String[] args) {
+        int n = 221;
+
+        String result = n % 2 == 0 ? "Число четное" : "нечетное";
+        System.out.println(result);
+
+    }
+} 
