@@ -1,0 +1,10 @@
+public class LoopS {
+    public static void main(String[] args) {
+
+        int last = 1;
+        for (int first = 5; first >= last; first--) {
+            System.out.println(first);
+
+        }
+    }
+} 
