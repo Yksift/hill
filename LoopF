@@ -1,0 +1,14 @@
+public class LoopF {
+    public static void main(String[] args) {
+        int first;
+        int last = 5;
+
+        for (first = 1; first <= last; first++) {
+            System.out.println(first);
+
+        }
+    }
+}
+
+
+
