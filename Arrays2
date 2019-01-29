@@ -1,0 +1,46 @@
+package lesson4;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arrays2 {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 6, 7};
+        // Arrays.sort(array);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число для поиска : ");
+        int num = scanner.nextInt();
+        int first = 0;
+        int last = array.length - 1;
+
+        checkArray(array, num, first, last);
+//        for (int i = 0; i < array.length - 1; i++) {
+//            array[i] = i;
+//
+//            do {
+//                checkArray(array, num, first, last);
+//            } while (i == num);
+//        }
+
+
+    }
+
+    private static int checkArray(int[] array, int num, int first, int last) {
+        int mid = (last + first) / 2;
+
+        while ((array[mid] != num) && (first <= last)) {
+            if (array[mid] > num) {
+                last = mid - 1;
+            } else {
+                first = mid + 1;
+            }
+            mid = (first + last) / 2;
+        }
+        if (first <= last) {
+            System.out.println(num + " - это " + ++mid + " элемент в массиве ");
+        } else {
+            System.out.println(" Элемент не найден");
+        }
+        return 0;
+    }
+}
