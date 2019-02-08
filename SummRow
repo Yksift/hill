@@ -1,0 +1,34 @@
+package lesson5;
+
+public class Task1hw {
+    public static void main(String[] args) {
+        int array[][] = new int[4][4];
+
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                array[i][j] = (int) (Math.random() * 12 - 6);
+                System.out.print(array[i][j] + " | ");
+            }
+            System.out.println();
+        }
+        summRow(array);
+    }
+
+
+    public static int summRow(int array[][]) {
+        int size = array.length;
+        int k = 0;
+        int row = 0;
+
+        while (k < size) {
+            for (int i = 0; i < size; i++) {
+                row += array[k][i];
+            }
+            k++;
+            System.out.println("row" + k + " = " + row);
+            row = 0;
+        }
+        return 0;
+    }
+}
