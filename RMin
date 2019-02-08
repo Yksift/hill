@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number a : ");
+        int a = scanner.nextInt();
+        System.out.print("Input a number b : ");
+        int b = scanner.nextInt();
+
+        System.out.println("min = " + returnMin(a,b));
+    }
+
+    public static int returnMin(int a, int b) {
+        if (a > b) return b;
+        if (a < b) return a;
+        throw new IllegalArgumentException("a == b. Use different numbers!");
+    }
+} 
