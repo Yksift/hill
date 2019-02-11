@@ -1,10 +1,10 @@
-package lesson7hw;
+
 
 public class Rectangle {
-    int top;
-    int left;
-    int width;
-    int height;
+    private int top;
+    private int left;
+    private int width;
+    private int height;
 
     public Rectangle(int top, int left, int width, int height) {
         this.top = top;
