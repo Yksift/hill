@@ -1,0 +1,135 @@
+public class Main {
+    static Cat cat;
+    static Dog dog;
+   // static Pet pet;
+
+    public static void main(String[] args) {
+        cat = new Cat(7, "Cat", 32, true);
+        cat.setHair(true);
+        System.out.println(cat);
+        cat.say();
+        System.out.println(" ");
+        dog = new Dog(10, "Dog", 112, true);
+        dog.setTrainedDog(true);
+        System.out.println(dog);
+        dog.say();
+    }
+} 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Pet {
+    private int age;
+    private String name;
+    private int weight;
+
+    public Pet(int age, String name, int weight) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public Pet() {
+
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void say() {
+        System.out.println("Say something ");
+    }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "age = " + age +
+                ", name = '" + name + '\'' +
+                ", weight = " + weight +
+                '}';
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Cat extends Pet {
+    private boolean hair;
+
+    public boolean isHair() {
+        return hair;
+    }
+
+    public void setHair(boolean hair) {
+        this.hair = hair;
+
+    }
+
+//    @Override
+//    public String toString() {
+//        return "Cat{" +
+//                "hair=" + hair +
+//                '}';
+//    }
+
+    public Cat(int age, String name, int weight, boolean hair) {
+        super(age, name, weight);
+        this.hair = hair;
+    }
+
+    public Cat(boolean hair) {
+        this.hair = hair;
+    }
+
+    @Override
+    public void say() {
+        System.out.println("meow");
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+public class Dog extends Pet {
+private boolean trainedDog;
+
+    public boolean isTrainedDog() {
+        return trainedDog;
+    }
+
+    public void setTrainedDog(boolean trainedDog) {
+        this.trainedDog = trainedDog;
+    }
+
+    public Dog(int age, String name, int weight, boolean trainedDog) {
+        super(age, name, weight);
+        this.trainedDog = trainedDog;
+    }
+
+    public Dog(boolean trainedDog) {
+        this.trainedDog = trainedDog;
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Ga");
+    }
+}
