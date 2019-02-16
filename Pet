@@ -5,14 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
         cat = new Cat(7, "Cat", 32, true);
-        cat.setHair(true);
+        //cat.setHair(true);
         System.out.println(cat);
         System.out.println("hair : " + cat.isHair());
 
         cat.say();
         System.out.println(" ");
         dog = new Dog(10, "Dog", 112, true);
-        dog.setTrainedDog(true);
+       // dog.setTrainedDog(true);
         System.out.println(dog);
         System.out.println("trainedDog : " + dog.isTrainedDog());
         dog.say();
